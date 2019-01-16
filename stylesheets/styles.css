@@ -14,6 +14,16 @@ canvas {
   margin-top: -1px;
 }
 
+h2 {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
+p {
+  font-size: 19px;
+  letter-spacing: 0.1px;
+  line-height: 25px;
+}
+
 
 .game {
   background: #F9C22D;
@@ -28,13 +38,12 @@ canvas {
 }
 
 .stats {
+  font-size: 32px;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  font-size: 32px;
-  font-weight: bold;
 }
 
 .stat {
@@ -50,14 +59,4 @@ canvas {
   background: #111111;
   color: #ffffff;
   padding-left: 15px;
-}
-
-h2 {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
-}
-
-p {
-  font-size: 19px;
-  letter-spacing: 0.1px;
-  line-height: 25px;
 }
