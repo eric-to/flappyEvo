@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flappy Evo</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+  <script src="./nn.js"></script>
+  <script src="./matrix.js"></script>
+  <script src="./main.js"></script>
+  <script src="./geneticAlgo.js"></script>
+  <script src="./bird.js"></script>
+  <script src="./environment.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+  <link rel="stylesheet" href="./stylesheets/styles.css">
+  <link rel="stylesheet" href="./stylesheets/slider.css">
+
+</head>
+<body>
+
+  <div class="game">
+
+    <div id="canvascontainer"></div>
+
+    <div class="stats">
+      <div class="stat">
+        <input id="speedSlider" type="range" min="1" max="10" value="1">
+        Simulation Speed:
+        <span id="speed">1</span>
+      </div>
+
+      <div class="stat">
+        Score: <span id="hs">0</span>
+      </div>
+
+      <div class="stat">
+        Best Score: <span id="ahs">0</span>
+      </div>
+
+      <div class="stat">
+        Generation: <span id="gen">1</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="panel">
+    <h2>Neural Networks & Neuroevolution</h2>
+    <div>
+      <p>
+        Flappy Bird was a popular game originally created by indie game developer Dong Nguyen.
+        Its a simple game with a tap-to-jump mechanic, which is harder to master than it may
+        appear.
+      </p>
+      <p>
+        Recently, one of the coolest advancements in the game industry has been artificial intelligence
+        that dynamically learns with or without input from the environment. For a game such as Flappy Bird,
+        two common techniques have been used to teach the AI how to play: reinforcement learning (has been around
+        longer) and neuroevolution, which at its core, is an implementation of real-life genetic evolution and
+        mutation.
+      </p>
+      <p>
+        General summary of how the AI learns how to play: On the first generation of the "game", there are several
+        AI, which are actually all individual neural networks (like having many birds, each having one brain). When
+        a game ends, or all the birds of one generation have died or lost the game, the longest surviving birds or
+        fittest birds (like in Darwinism) are used to create a genetic crossover / next generation. Each bird in the
+        new generation is a very slightly modified neural network / mutated to allow for continued learning.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
