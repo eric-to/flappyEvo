@@ -12,17 +12,16 @@ function nextGeneration() {
   allBirds = activeBirds.slice();
 }
 
-// Creates new generation of birds
 function generate(oldBirds) {
   let newBirds = [];
   for (let i = 0; i < oldBirds.length; i++) {
-    let bird = poolSelection(oldBirds); // Choose bird based on fitness
+    let bird = selectFromPool(oldBirds); // Choose bird based on fitness
     newBirds.push(bird);
   }
   return newBirds;
 }
 
-// Normalize birds' fitness
+// This makes it so that all of the birds' fitness values sum up to 1
 function normalizeFitness(birds) {
   let totalScore = 0;
   for (let i = 0; i < birds.length; i++) {
@@ -36,7 +35,7 @@ function normalizeFitness(birds) {
 }
 
 // Selects one bird from old birds based on its "fitness"
-function poolSelection(birds) {
+function selectFromPool(birds) {
   let idx = 0;
   let r = Math.random();
   // Keep subtracting probabilities until you get less than zero

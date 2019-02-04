@@ -22,32 +22,6 @@
 </head>
 <body>
 
-  <div class="game">
-
-    <div id="canvascontainer"></div>
-
-    <div class="stats">
-      <div class="stat">
-        <input id="speedSlider" type="range" min="1" max="10" value="1">
-        Simulation Speed:
-        <span id="speed">1</span>
-      </div>
-
-      <div class="stat">
-        Score: <span id="hs">0</span>
-      </div>
-
-      <div class="stat">
-        Best Score: <span id="ahs">0</span>
-      </div>
-
-      <div class="stat">
-        Generation: <span id="gen">1</span>
-      </div>
-    </div>
-
-  </div>
-
   <div class="panel">
     <h2>Neural Networks & Neuroevolution</h2>
     <div>
@@ -71,6 +45,34 @@
         new generation is a very slightly modified neural network / mutated to allow for continued learning.
       </p>
     </div>
+  </div>
+
+  <div class="game">
+
+    <div id="canvas-container"></div>
+
+    <div class="stats">
+
+      <div class="stat">
+        <input id="speedSlider" type="range" min="1" max="10" value="1">
+        Simulation Speed:
+        <span id="speed">1</span>
+      </div>
+
+      <div class="stat">
+        Generation: <span id="gen">1</span>
+      </div>
+
+      <div class="stat">
+        Score: <span id="hs">0</span>
+      </div>
+
+      <div class="stat">
+        Best Score: <span id="ahs">0</span>
+      </div>
+
+    </div>
+
   </div>
 
 </body>

@@ -40,14 +40,13 @@ p {
 .stats {
   font-size: 32px;
   font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 }
 
 .stat {
-  border-bottom: 2px solid #111111;
+  /* border-bottom: 2px solid #111111; */
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -14,7 +14,7 @@ let highScore = 0; // Best high score ever
 
 function setup() {
   let canvas = createCanvas(600, 400);
-  canvas.parent('canvascontainer');
+  canvas.parent('canvas-container');
 
   // Access the interface elements
   speedSlider = select('#speedSlider');
